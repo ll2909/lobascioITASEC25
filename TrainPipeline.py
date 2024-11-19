@@ -51,6 +51,10 @@ def execute_pipeline(conf):
             torch.from_numpy(y_valid).long()
         )
 
+        if conf.getboolean("save_tensors"):
+            torch.save(train_ds, os.path.join(conf["tensor_out_path"], "train_tensors.pt"))
+            torch.save(valid_ds, os.path.join(conf["tensor_out_path"], "valid_tensors.pt"))
+
 
     match conf.getint("at_fgsm"):
         case 1: # AdvFull mode

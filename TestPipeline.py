@@ -43,6 +43,10 @@ def execute_pipeline(conf):
             torch.from_numpy(y_adv).long()
         )
 
+        if conf.getboolean("save_tensors"):
+            torch.save(test_ds, os.path.join(conf["tensor_out_path"], "test_tensors.pt"))
+            torch.save(adv_ds, os.path.join(conf["tensor_out_path"], "adversary_tensors.pt"))
+
      
     model = load_model(conf["model_path"])
     _, clf_report_m = test(model = model,
