@@ -8,7 +8,7 @@ _Luca Lobascio, Giuseppina Andresini, Annalisa Appice, Donato Malerba_
 
 Please cite our work if you find it useful for your research and work.
 ```
-  @ARTICLE{9036935, 
+  @ARTICLE{, 
   author={L. {Lobascio} and G. {Andresini} and A. {Appice} and D. {Malerba}}, 
   journal={}, 
   title={Adversarial Training to Improve Accuracy and Robustness of a Windows PE Malware Detection Model}, 
@@ -35,5 +35,6 @@ Packages needed are:
 ## Data
 The dataset used for experiments are accessible from the following links:
 - [__BODMAS__](https://whyisyoung.github.io/BODMAS/)
-- Dataset used in [__Windows-PE-Adversarial-Attacks__](https://github.com/MuhammdImran/Windows-PE-Adversarial-Attacks) by Muhammad Imran et al.\\
+- Dataset used in [__Windows-PE-Adversarial-Attacks__](https://github.com/MuhammdImran/Windows-PE-Adversarial-Attacks) by Muhammad Imran et al.\
+
 Pre-extracted features and preprocessed tensors are available at the following [__LINK__](https://unibari-my.sharepoint.com/:f:/g/personal/l_lobascio4_alumni_uniba_it/EllU1CnqXGZLqvPHxdhEHIIBbStAXmeSO7E_cNId4m8Meg?e=QeaCWz)
