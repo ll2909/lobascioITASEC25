@@ -38,3 +38,11 @@ The dataset used for experiments are accessible from the following links:
 - Dataset used in [__Windows-PE-Adversarial-Attacks__](https://github.com/MuhammdImran/Windows-PE-Adversarial-Attacks) by Muhammad Imran et al.\
 
 Pre-extracted features and preprocessed tensors are available at the following [__LINK__](https://unibari-my.sharepoint.com/:f:/g/personal/l_lobascio4_alumni_uniba_it/EllU1CnqXGZLqvPHxdhEHIIBbStAXmeSO7E_cNId4m8Meg?e=QeaCWz)
+
+## How to use
+Run the script main.py \
+The script can:
+* Extract features from Windows PE executable files (.exe) and save to .csv file.
+* Train the model using .csv files or preprocessed PyTorch TensorDataset files (.pt) as input, and preprocess the data using scikit-learn QuantileTransformer (only with .csv)
+* Run inference tests using .csv files or preprocessed PyTorch TensorDataset files (.pt) as input
+* Explain predictions using Shapley Values (SHAP) and visualize using the beeswarm plot. Note: works only with TensorDataset files (.pt)
