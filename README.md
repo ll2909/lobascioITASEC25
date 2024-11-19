@@ -47,3 +47,5 @@ The script can:
 * Train the model using .csv files or preprocessed PyTorch TensorDataset files (.pt) as input, and preprocess the data using scikit-learn QuantileTransformer (only with .csv)
 * Run inference tests using .csv files or preprocessed PyTorch TensorDataset files (.pt) as input
 * Explain predictions using Shapley Values (SHAP) and visualize using the beeswarm plot. Note: works only with TensorDataset files (.pt)
+
+To change settings, modify the file __config.conf__ according to the mode you're using.
