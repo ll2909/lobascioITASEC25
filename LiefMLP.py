@@ -147,6 +147,8 @@ def test(model, test_loader, criterion, plots_path = None, roc_plot = True, cm_p
     predlist=torch.zeros(0,dtype=torch.long, device='cpu')
     lbllist=torch.zeros(0,dtype=torch.long, device='cpu')
     scores=torch.zeros(0,dtype=torch.long, device='cpu')
+    criterion = criterion.to(device)
+    model = model.to(device)
 
     # initialize lists to monitor test loss and accuracy
     test_loss = 0.0

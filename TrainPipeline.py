@@ -5,7 +5,7 @@ import pandas as pd
 import torch
 from torch.utils.data import TensorDataset, DataLoader
 
-from preprocessing.FeatureExtractor import extract_features
+
 from preprocessing.FeaturesPreprocessor import fit_qt, transform_data
 from LIEF_FGSM import generate_adversary_dataset
 from LiefMLP import load_model, train, LiefMLP
@@ -19,14 +19,10 @@ def execute_pipeline(conf):
         train_ds = torch.load(conf["train_tensor_path"])
         valid_ds = torch.load(conf["validation_tensor_path"])
     else:
-        if conf.getboolean("extract_features"):
-            # Extract features from the exes
-            train_features_df = extract_features(conf["train_path"], conf["out_csv_path"]+"_train.csv", class_idx = 1, ret_features = True)
-            valid_features_df = extract_features(conf["valid_path"], conf["out_csv_path"]+"_valid.csv", class_idx = 1, ret_features = True)
-        else:
-            # Load pre-extracted features from CSV file
-            train_features_df = pd.read_csv(conf["train_path"])
-            valid_features_df = pd.read_csv(conf["validation_path"])
+        
+        # Load pre-extracted features from CSV file
+        train_features_df = pd.read_csv(conf["train_path"])
+        valid_features_df = pd.read_csv(conf["validation_path"])
         
         y_train = train_features_df.pop("label").to_numpy()
         x_train = train_features_df.to_numpy()
