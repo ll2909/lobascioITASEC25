@@ -6,7 +6,7 @@ seed = 42
 def fit_qt(dataset, file_out):
     # Fit the QuantileTransformer to the dataset
     print("Fitting Quantile Transformer")
-    QuantileTransformer(output_distribution="normal", random_state=seed, copy=False)
+    qt = QuantileTransformer(output_distribution="normal", random_state=seed, copy=False)
     qt.fit(dataset)
     # Save the fitted transformer to a file
     with open(file_out, 'wb') as f:
