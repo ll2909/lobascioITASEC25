@@ -63,7 +63,7 @@ To change settings, modify the file __config.conf__ according to the mode you're
   - validation_path : path to the .csv file for validation data.
   - train_tensor_path : path to the .pt file for preprocessed tensors training data.
   - validation_tensor_path : path to the .pt file for preprocessed tensors validation data.
-  - use_tensors : 1 if you want to used tensors files, 0 for using .csv files.
+  - use_tensors : 1 for using tensors files, 0 for using .csv files.
   - qt_preprocess : 1 if you want to preprocess data using scikit-learn QuantileTransformer, 0 otherwise (not advisable). This feature is available only if use_tensor is set to 0.
   - qt_path : where the QuantileTransformer file will be saved (or loaded, if it is already saved).
   - save_tensors : 1 if you want to save the preprocessed data as TensorDataset, 0 otherwise. This feature is available only if use_tensor_is set to 0. 
@@ -79,7 +79,7 @@ To change settings, modify the file __config.conf__ according to the mode you're
   - adversary_path : path to the .csv file for adversary malwares testing data.
   - train_tensor_path : path to the .pt file for preprocessed tensors testing data.
   - validation_tensor_path : path to the .pt file for preprocessed tensors adversary malwares testing data.
-  - use_tensors : 1 if you want to used tensors files, 0 for using .csv files.
+  - use_tensors : 1 for using tensors files, 0 for using .csv files.
   - qt_preprocess : 1 if you want to preprocess data using scikit-learn QuantileTransformer, 0 otherwise (not advisable). This feature is available only if use_tensor is set to 0.
   - qt_path : the path for loading the QuantileTransformer (you can fit the QT only in TRAIN).
   - save_tensors : 1 if you want to save the preprocessed data as TensorDataset, 0 otherwise. This feature is available only if use_tensor_is set to 0. 
@@ -94,5 +94,5 @@ To change settings, modify the file __config.conf__ according to the mode you're
   - background_knowledge_size: number of samples used as background knowledge to generate explanations. A value higher than 1000 is computationally more expensive. It uses a stratified samples selection.
   - class_index : the class of the examples to explain. 0 for goodware, 1 for malware.
   - features_list : the features names list, used for the plot.
-  - expl_save_path : where the the explanations files will be saved.
+  - expl_save_path : where the the explanations file will be saved.
   - plots_path : where the plots images will be saved.
