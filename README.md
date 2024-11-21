@@ -54,7 +54,7 @@ To change settings, modify the file __config.conf__ according to the mode you're
 ## Config parameters
 
 #### FEATURES_EXTRACTION
-  - goodware_folder : path in which the goodware executables are sace.
+  - goodware_folder : path in which the goodware executables are saved.
   - malware_folder : path in which the malware executables are saved.
   - out_csv_path : where the .csv output file will be saved.
 
